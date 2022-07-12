@@ -7,7 +7,7 @@ from models.artist import Artist
 
 def create(artist):
     sql = """
-    INSERT INTO album (name)
+    INSERT INTO artist (name)
     VALUES (%s)
     RETURNING *
     """
