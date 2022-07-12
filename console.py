@@ -12,6 +12,8 @@ artist_repository.create(artist1)
 album1 = Album("Appetite for Destruction", "Rock", 1)
 album_repository.create(album1)
 
+# album_repository.delete_all()
+# artist_repository.delete_all()
 
 
 # for thing in result:

@@ -16,3 +16,8 @@ def create(artist):
     id = results[0]['id']
     artist.id = id
     return artist
+
+def delete_all():
+    sql = """
+    DELETE FROM Artist"""
+    run_sql(sql)

@@ -16,3 +16,8 @@ def create(album):
     id = results[0]['id']
     album.id = id
     return album
+
+def delete_all():
+    sql = """
+    DELETE FROM album"""
+    run_sql(sql)
