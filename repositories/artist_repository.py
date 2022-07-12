@@ -21,3 +21,26 @@ def delete_all():
     sql = """
     DELETE FROM Artist"""
     run_sql(sql)
+
+def select(id):
+    artists = None
+    sql = """SELECT * FROM artist WHERE id = %s;"""
+    values = [id]
+    results = run_sql(sql, values)
+    if results:
+        result = results[0]
+        artists = Artist(result['name'], result['id'])
+    return artists
+
+def select_all():
+    artists = []
+
+    sql = """
+    SELECT * FROM artist
+    """
+    results = run_sql(sql)
+
+    for row in results:
+        artist = Artist(row['name'], row['id'])
+        artists.append(artist)
+    return artists
